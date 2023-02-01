@@ -1,8 +1,10 @@
 import './App.css';
 
 function App() {
+  const clientId = import.meta.env.VITE_CLIENTID;
+
   const odOptions = {
-    clientId: '9e63e70f-5443-4649-8d4b-b7df4d958bac',
+    clientId: clientId,
     action: 'query',
     multiSelect: true,
     advanced: {
@@ -26,7 +28,7 @@ function App() {
   };
   const launchSaveToOneDrive = () => {
     let odOptions = {
-      clientId: '9e63e70f-5443-4649-8d4b-b7df4d958bac',
+      clientId: clientId,
       action: 'save',
       sourceInputElementId: 'fileUploadControl',
       sourceUri: '',
